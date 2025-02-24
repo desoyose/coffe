@@ -52,7 +52,7 @@
 
             <div
                 class="main__info flex flex-col z-10 w-[95%] p-10 text-Light-Cream text-center  rounded-xl py-24 
-      bg-[url(/assets/about/mobile/image-hero-whitecup.jpg)] bg-cover bg-center sm:bg-[url(/assets/about/desktop/image-hero-whitecup.jpg)] xl:max-w-[1280px]">
+      bg-[url(/assets/about/mobile/image-hero-whitecup.jpg)] bg-cover bg-center md:bg-[url(/assets/about/tablet/image-hero-whitecup.jpg)] lg:bg-[url(/assets/about/desktop/image-hero-whitecup.jpg)] xl:max-w-[1280px]">
                 <div class="main__header-info md:flex md:flex-col md:w-[400px] md:text-start lg:w-[495px]">
 
                     <h1 class="  text-3xl font-fraunces font-black py-8">About Us</h1>
@@ -67,12 +67,17 @@
             </div>
         </div>
         <div class="w-[95%] flex flex-col justify-center self-center md:flex-row md:gap-8 xl:gap-32 xl:w-[1100px]">
-            <div class="layot__main  flex flex-col justify-center  text-center h-auto md:flex-1 ">
-                <img class="rounded-xl h-auto " src="./assets/about/mobile/image-commitment.jpg" alt="">
-
+            <div class="layot__main  flex flex-col justify-center  text-center h-auto md:w-[50%] lg:flex-1 ">
+                <picture class="w-full">
+                    <source srcset="./assets/about/mobile/image-commitment.jpg" media="(max-width: 769px)">
+                        <source srcset="./assets/about/desktop/image-commitment.jpg" media="(min-width: 1280px)">
+                        <source srcset="./assets/about/tablet/image-commitment.jpg" media="(min-width: 769px)">
+                    <img class="rounded-xl  object-cover" src="./assets/about/mobile/image-commitment.jpg" alt="">
+                </picture>
+                
             </div>
             <section
-                class="layot__main   flex flex-col justify-center self-center mt-20 text-center md:flex-1 md:mt-0 md:text-start ">
+                class="layot__main flex flex-col justify-center self-center mt-20 text-center md:w-[50%] lg:flex-1 md:mt-0 md:text-start ">
                 <article>
                     <h2 class="font-fraunces font-black text-Dark-Grey-Blue text-4xl z-10 mb-8">Our conmmiment</h2>
                     <p class="text-Dark-Grey-Blue opacity-80 text-base/7 text-balance">We’re built on a simple mission

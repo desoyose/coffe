@@ -1,5 +1,5 @@
 let plans = [];
-let isCapsuleSelected = false; // Variable global para controlar si "capsule" ha sido seleccionado
+let isCapsuleSelected = false; 
 let isClick = false;
 const optionsHow = document.querySelectorAll('.option__how');
 const optionType = document.querySelectorAll(".option__type");
@@ -24,7 +24,7 @@ const errorPlan = document.querySelector("#errorPlan");
 const planText = document.querySelector(".plan__text");
 const spanContent = document.querySelector(".span__content");
 const spanOrder = document.querySelector(".span__order");
-let pElement = null;  // Definir pElement fuera de cualquier función, para que sea accesible globalmente
+let pElement = null;  
 let price =0;
 let lineCircle =false; 
 const step =document.querySelectorAll(".step");
@@ -34,35 +34,30 @@ const option = document.querySelectorAll(".option");
 
 const menuItems = document.querySelectorAll('.menuPlan');
 
-let startIndex = 1;  // Este es el índice global que usarás para los pasos a partir del 2.
+let startIndex = 1;  
 
-console.log(isClick);
-// Función para manejar los clics en los elementos de 'option__how'
+// console.log(isClick);
 const handleHowClick = () => {
 
     optionsHow.forEach(option =>
         option.addEventListener('click', () => {
 
-            // Actualiza el array de planes con la opción seleccionada
             const existingOption = plans.find(plan => plan.Option);
             if (existingOption) {
-                existingOption.Option = option.id; // Actualizamos el Type
+                existingOption.Option = option.id; 
             } else {
-                plans.push({ Option: option.id }); // Si no existe, lo agregamos
+                plans.push({ Option: option.id }); 
             }
-            console.log(plans);
+            // console.log(plans);
 
-            // Maneja el estado de isCapsuleSelected
             isCapsuleSelected = (option.id === "capsule");
-            console.log("¿Capsule seleccionado?:", isCapsuleSelected);
+            // console.log("¿Capsule seleccionado?:", isCapsuleSelected);
 
-            // Elimina la clase 'active' de todas las opciones
             optionsHow.forEach(opt => {
                 opt.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
                 opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
             });
 
-            // Añade la clase 'active' y estilos al elemento seleccionado
             option.classList.add('active', 'bg-Dark-Cyan', 'text-Very-light-button');
             option.classList.remove('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
 
@@ -80,7 +75,7 @@ const handleHowClick = () => {
 
                 plans = [plans[0]];
                 rotateIconsExceptFirstTwoSteps();
-                console.log('Array de planes borrados:', plans);
+                // console.log('Array de planes borrados:', plans);
                 isClick = true;
                 accordionContents.forEach((accordionContent, index) => {
                 if (index > 1) { 
@@ -90,7 +85,7 @@ const handleHowClick = () => {
                     accordionContent.classList.replace('max-h-0','h-auto');
                 }
                 circles.forEach((circle, index) => {
-                    if (index !== 0) { // Segundo círculo
+                    if (index !== 0) {
                  
                         
                         circle.classList.remove("opacity-100");
@@ -120,7 +115,7 @@ const handleHowClick = () => {
                 isClick = false;
                 plans = [plans[0]];
                 rotateIconsExceptFirstTwoSteps();
-                console.log('Array de planes borrados:', plans);
+                // console.log('Array de planes borrados:', plans);
                 accordionContents.forEach((accordion, index) => {
                     if (index > 1) { 
                         accordion.classList.remove("max-h-full");
@@ -128,7 +123,7 @@ const handleHowClick = () => {
                     } 
                 });
                 circles.forEach((circle, index) => {
-                    if (index !== 0) { // Segundo círculo
+                    if (index !== 0) { 
                  
                         
                         circle.classList.remove("opacity-100");
@@ -144,38 +139,12 @@ const handleHowClick = () => {
 
             }
 
-            console.log(isClick)
+            // console.log(isClick)
 
         })
     );
 };
-const changeClassOption = (option) => {
-    // 1. Resetear las clases del elemento seleccionado
-    option.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
-    option.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
 
-    // 2. Rotar todos los íconos a 0 grados a partir del índice global (startIndex)
-    const steps = document.querySelectorAll('.step');
-    steps.forEach((step, index) => {
-        if (index >= startIndex) {
-            const narrowIcon = step.querySelector('.narrow');
-            if (narrowIcon) {
-                narrowIcon.classList.remove('rotate-180');
-                narrowIcon.classList.add('rotate-0');
-                console.log(`Ícono en step ${index + 1} reseteado a 0 grados`);
-            }
-        }
-    });
-
-    // 3. Resetear los colores de los <li> del menú a partir del índice global (startIndex)
-    menuItems.forEach((item, index) => {
-        if (index >= startIndex) {
-            item.classList.remove('text-Dark-Cyan');
-            item.classList.add('text-Very-Dark-Cyan');
-            console.log(`Color reseteado para el menú en el índice: ${index}`);
-        }
-    });
-};
 
 
 
@@ -186,11 +155,11 @@ const handleTypeSection = () => {
         option.addEventListener("click", () => {
             const existingType = plans.find(plan => plan.Type);
             if (existingType) {
-                existingType.Type = option.id; // Actualizamos el Type
+                existingType.Type = option.id;
             } else {
-                plans.push({ Type: option.id }); // Si no existe, lo agregamos
+                plans.push({ Type: option.id }); 
             }
-            console.log(plans);
+            // console.log(plans);
             optionType.forEach(opt => {
                 opt.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
                 opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
@@ -227,7 +196,7 @@ const handleWeight = () => {
             } else {
                 plans.push({ Weight: option.id });
             }
-            console.log(plans);
+            // console.log(plans);
             optionWeight.forEach(opt => {
                 opt.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
                 opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
@@ -256,7 +225,7 @@ const handleSensory = () => {
             } else {
                 plans.push({ Sensory: option.id });
             }
-            console.log(plans);
+            // console.log(plans);
             optionsSensory.forEach(opt => {
                 opt.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
                 opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
@@ -282,7 +251,7 @@ const handleTime = () => {
             } else {
                 plans.push({ Time: option.id });
             }
-            console.log(plans);
+            // console.log(plans);
             optionTime.forEach(opt => {
                 opt.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
                 opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
@@ -292,9 +261,8 @@ const handleTime = () => {
             const currentStepIndex = getCurrentStepIndex(option);
 
                 rotateMenuItemInLastStep(currentStepIndex);
-            // checkActiveOptions();
             circles.forEach((circle, index) => {
-                if (index === 1) { // Segundo círculo
+                if (index === 1) { 
                     const lineStart = circles[0].getBoundingClientRect().left;
                     const targetPosition = circle.getBoundingClientRect().left;
                     
@@ -302,7 +270,7 @@ const handleTime = () => {
                     circle.classList.remove("opacity-0");
                     circle.classList.add("opacity-100");
                     line.style.width = `${newLineWidth}px`;
-                    console.log(`Línea ajustada a ${newLineWidth}px de ancho`);
+                    // console.log(`Línea ajustada a ${newLineWidth}px de ancho`);
                     
 
                 }
@@ -312,12 +280,34 @@ const handleTime = () => {
     
 
 }
+const changeClassOption = (option) => {
+    option.classList.remove('active', 'bg-Dark-Cyan', 'text-Very-light-button');
+    option.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
+
+    const steps = document.querySelectorAll('.step');
+    steps.forEach((step, index) => {
+        if (index >= startIndex) {
+            const narrowIcon = step.querySelector('.narrow');
+            if (narrowIcon) {
+                narrowIcon.classList.remove('rotate-180');
+                narrowIcon.classList.add('rotate-0');
+                // console.log(`Ícono en step ${index + 1} reseteado a 0 grados`);
+            }
+        }
+    });
+
+    menuItems.forEach((item, index) => {
+        if (index >= startIndex) {
+            item.classList.remove('opacity-60');
+            item.classList.add('opacity-100');
+        }
+    });
+};
 
 const createPlan = () => {
 
     
     const priceText = document.querySelector(".price__text");
-    // const closeSpan = document.querySelector(".close__span");
     let optionPrice =0;
     let shipmentPrice =0;
     let typePrice=0;
@@ -347,7 +337,6 @@ const createPlan = () => {
             }
         }
 
-        // Asignar precio de tipo
         if (selectedPlan.Type) {
             if (selectedPlan.Type.toLowerCase() === "premium") {
                 typePrice = 12.00;
@@ -358,52 +347,49 @@ const createPlan = () => {
             }
         }
 
-        // Asignar precio según el peso y calcular el costo mensual de envío
         if (selectedPlan.Weight) {
             if (selectedPlan.Weight === "small") {
                 if (selectedPlan.Time === "weekly") {
-                    shipmentPrice = 7.20 * 4;  // Se multiplica por 4 para obtener el precio mensual
+                    shipmentPrice = 7.20 * 4;  
                 } else if (selectedPlan.Time === "two__weeks") {
-                    shipmentPrice = 9.60 * 2;  // Se multiplica por 2
+                    shipmentPrice = 9.60 * 2;  
                 } else if (selectedPlan.Time === "monthly") {
-                    shipmentPrice = 12.00;    // Precio mensual sin multiplicar
+                    shipmentPrice = 12.00;    
                 }
             } else if (selectedPlan.Weight === "medium") {
                 if (selectedPlan.Time === "weekly") {
-                    shipmentPrice = 13.00 * 4;  // Se multiplica por 4 para obtener el precio mensual
+                    shipmentPrice = 13.00 * 4;  
                 } else if (selectedPlan.Time === "two__weeks") {
-                    shipmentPrice = 17.50 * 2;  // Se multiplica por 2
+                    shipmentPrice = 17.50 * 2;  
                 } else if (selectedPlan.Time === "monthly") {
-                    shipmentPrice = 22.00;     // Precio mensual sin multiplicar
+                    shipmentPrice = 22.00;    
                 }
             } else if (selectedPlan.Weight === "large") {
                 if (selectedPlan.Time === "weekly") {
-                    shipmentPrice = 22.00 * 4;  // Se multiplica por 4 para obtener el precio mensual
+                    shipmentPrice = 22.00 * 4; 
                 } else if (selectedPlan.Time === "two__weeks") {
-                    shipmentPrice = 32.00 * 2;  // Se multiplica por 2
+                    shipmentPrice = 32.00 * 2;  
                 } else if (selectedPlan.Time === "monthly") {
-                    shipmentPrice = 42.00;     // Precio mensual sin multiplicar
+                    shipmentPrice = 42.00;    
                 }
             }else if (selectedPlan.Weight === "no") {
                 if (selectedPlan.Time === "weekly") {
-                    shipmentPrice = 16.00 * 4;  // Se multiplica por 4 para obtener el precio mensual
+                    shipmentPrice = 16.00 * 4;  
                 } else if (selectedPlan.Time === "two__weeks") {
                     shipmentPrice = 30.00 * 2;  // Se multiplica por 2
                 } else if (selectedPlan.Time === "monthly") {
-                    shipmentPrice = 55.00;     // Precio mensual sin multiplicar
+                    shipmentPrice = 55.00;     
                 }
             }
         }
 
-        // Calcular el precio final
         let totalPrice = (optionPrice + typePrice) * weightPrice + shipmentPrice;
         priceText.innerHTML = `$${totalPrice.toFixed(2)}`;
         if(!isCapsuleSelected){
         if (missingFields.length === 0) {
-            console.log("El plan está completo:", selectedPlan);
+            // console.log("El plan está completo:", selectedPlan);
             errorPlan.innerHTML="";
             errorPlan.classList.replace("h-12","max-h-0");
-            // errorPlan.classList.replace("max-h-0","h-12");
             planText.classList.remove("max-h-0", "p-0");
             planText.classList.add("p-10");
             spanOrder.classList.replace("hidden","flex");
@@ -441,10 +427,9 @@ const createPlan = () => {
         } 
     }else if(isCapsuleSelected){
         if (missingFields.length === 0) {
-            console.log("El plan está completo:", selectedPlan);
+            // console.log("El plan está completo:", selectedPlan);
             errorPlan.innerHTML="";
             errorPlan.classList.replace("h-12","max-h-0");
-            // errorPlan.classList.replace("max-h-0","h-12");
             planText.classList.remove("max-h-0", "p-0");
             planText.classList.add("p-10");
             spanOrder.classList.replace("hidden","flex");
@@ -483,7 +468,7 @@ const createPlan = () => {
 
     }
         if(missingFields.length !==0) {
-            console.log("Faltan opciones en el plan:", missingFields);
+            // console.log("Faltan opciones en el plan:", missingFields);
             errorPlan.innerHTML = `<span class="text-Light-Cream font-bold text-lg">
                 Debes elegir las siguientes opciones: ${missingFields.join(", ")}
             </span>`;
@@ -513,7 +498,7 @@ const closePlan = () => {
                 line.style.width = `${newLineWidth}px`;
                 circle.classList.remove("opacity-0");
                 circle.classList.add("opacity-100");
-                console.log(`Línea ajustada a ${newLineWidth}px de ancho`);
+                // console.log(`Línea ajustada a ${newLineWidth}px de ancho`);
             }
         });
     });
@@ -528,9 +513,8 @@ const deletePlan = () => {
         planText.classList.remove("p-10");
         planText.classList.add("max-h-0", "p-0");
         plans = [];
-        console.log(plans);
+        // console.log(plans);
         spanContent.removeChild(pElement);
-        console.log("pElement ha sido removido.");
 
         const optionAll = document.querySelectorAll(".option");
         optionAll.forEach(opt => {
@@ -538,7 +522,6 @@ const deletePlan = () => {
             opt.classList.add('bg-Box-Cream', 'text-Very-Dark-Cyan', 'hover:bg-Pale-Orange');
         });
 
-        // Resetear accordion contents y aplicar max-h-0 a partir del índice startIndex
         accordionContents.forEach((aco, index) => {
             if (index >= startIndex) { 
                 aco.classList.remove("h-auto");
@@ -546,7 +529,6 @@ const deletePlan = () => {
             }
         });
 
-        // Resetear iconos de rotación y menú a partir del índice startIndex
         rotateNarrowIconsAndMenu(startIndex);
     });
 }
@@ -564,19 +546,17 @@ const rotateNarrowIcon = (currentStepIndex) => {
         if (narrowIcon) {
             narrowIcon.classList.remove('rotate-0');
             narrowIcon.classList.add('rotate-180');
-            console.log(`Ícono del step ${currentStepIndex + 2} rotado a 0 grados`);
+            // console.log(`Ícono del step ${currentStepIndex + 2} rotado a 0 grados`);
         }
     }
 };
 const rotateMenuItemInLastStep = (currentStepIndex) => {
 
     menuItems.forEach((item, index) => {
-        // Cambiar color y rotar solo si el índice del paso es mayor que 1
         if (currentStepIndex > 0) {
             if (index === currentStepIndex) {
-                // Cambiar el color del texto de acuerdo con el índice del paso
-                item.classList.add('text-Dark-Cyan');  // Color para el paso actual
-                item.classList.remove('text-Very-Dark-Cyan');  // Restablecer a color neutral
+                item.classList.add('opacity-60'); 
+                item.classList.remove('opacity-100'); 
             } 
 
             
@@ -590,22 +570,20 @@ const rotateNarrowIconInLastStep = () => {
     const lastStep = document.querySelector("#step5");
     const narrowIcon = lastStep?.querySelector('.narrow');
     if (narrowIcon) {
-        narrowIcon.classList.remove('rotate-0'); // Aseguramos que no tenga la rotación anterior
-        narrowIcon.classList.add('rotate-180'); // Rotamos a 0 grados
-        console.log('Ícono rotado a 0 grados en el último paso');
+        narrowIcon.classList.remove('rotate-0'); 
+        narrowIcon.classList.add('rotate-180');
+        // console.log('Ícono rotado a 0 grados en el último paso');
     }
 };
 const rotateIconsExceptFirstTwoSteps = () => {
-    // Seleccionamos todos los íconos narrow dentro de los pasos
     const narrowIcons = document.querySelectorAll('.step .narrow');
     
-    // Recorremos todos los íconos
     narrowIcons.forEach((icon, index) => {
-        // Si el paso no es el primero ni el segundo (índices 0 y 1), rotamos el ícono
+
         if (index > 1) {
-            icon.classList.remove('rotate-180'); // Aseguramos que no tenga la rotación por defecto
-            icon.classList.add('rotate-0'); // Rotamos el ícono a 180 grados
-            console.log(`Ícono en el paso ${index + 1} rotado a 180 grados`);
+            icon.classList.remove('rotate-180');
+            icon.classList.add('rotate-0'); 
+            // console.log(`Ícono en el paso ${index + 1} rotado a 180 grados`);
         }
     });
 };
@@ -614,11 +592,10 @@ const getCurrentStepIndex = (option) => {
     const currentStep = option.closest('.step');
     
     const index = Array.from(document.querySelectorAll('.step')).indexOf(currentStep);
-    console.log('Índice del step actual:', index);
+    // console.log('Índice del step actual:', index);
     return index;
 };
 const rotateNarrowIconsAndMenu = (startIndex) => {
-    // Rotar los íconos a 0 grados a partir del índice startIndex
     const steps = document.querySelectorAll('.step');
     steps.forEach((step, index) => {
         if (index >= startIndex) {
@@ -626,17 +603,15 @@ const rotateNarrowIconsAndMenu = (startIndex) => {
             if (narrowIcon) {
                 narrowIcon.classList.remove('rotate-180');
                 narrowIcon.classList.add('rotate-0');
-                console.log(`Ícono en step ${index + 1} reseteado a 0 grados`);
+                // console.log(`Ícono en step ${index + 1} reseteado a 0 grados`);
             }
         }
     });
 
-    // Resetear los colores de los <li> del menú a partir del índice startIndex
     menuItems.forEach((item, index) => {
         if (index >= startIndex) {
-            item.classList.remove('text-Dark-Cyan');
-            item.classList.add('text-Very-Dark-Cyan');
-            console.log(`Color reseteado para el menú en el índice: ${index}`);
+            item.classList.remove('opacity-60');
+            item.classList.add('opacity-100');
         }
     });
 };

@@ -1,0 +1,1 @@
+const s=()=>{const o=document.querySelectorAll(".open__close"),n=document.querySelector(".header__nav"),t=document.querySelector(".nav__gradient"),c=()=>{n.classList.toggle("hidden"),t.classList.toggle("hidden"),o.forEach(e=>{e.classList.toggle("hidden")})};o.forEach(e=>{e.addEventListener("click",c)})};s();

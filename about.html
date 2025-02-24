@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/style.css" rel="stylesheet">
+
+    <title>Mi Proyecto</title>
+</head>
+
+<body class="h-full bg-Light-Cream w-full max-w-[1440px] mx-auto mb-24">
+    <header class="w-full flex justify-center  xl:max-w-[1280px] ">
+        <div
+            class="box__header relative flex flex-col justify-center    my-8 ml-4 md:flex-row md:justify-between  w-[95%] ">
+
+            <div class="box__shared-header w-12 right-0 h-8 absolute z-50 top-0">
+                <img class="open__close absolute top-0 z-50 right-7 md:hidden" src="./assets/shared/mobile/icon-hamburger.svg"
+                    alt="">
+                <img class="open__close absolute hidden top-0 z-50 right-7 md:hidden" src="./assets/shared/mobile/icon-close.svg"
+                    alt="">
+            </div>
+            <div class="flex w-[163px] h-auto z-30 md:w-[236px]">
+                <img class="object-contain w-full" src="./assets/shared/desktop/logo.svg" alt="">
+            </div>
+
+            <div class="flex  relative w-full md:w-[50%] xl:justify-center">
+
+                <div
+                    class="nav__gradient hidden z-20 top-0 left-0 fixed bg-[linear-gradient(0deg,_rgba(255,255,255,0.5)_0%,_rgba(255,255,255,1)_40%)] h-screen w-full md:hidden">
+                </div>
+                <nav
+                    class="header__nav hidden  flex absolute top-28 justify-center w-full z-30 md:relative md:flex md:top-0 md:justify-end">
+                    <ul class="link__footer--box text-Dark-Grey-Blue font-fraunces  flex flex-col justify-center  items-center gap-6 text-2xl font-black 
+                md:flex-row md:text-xs md:text-Just-Grey md:uppercase md:font-barlow md:font-bold ">
+                        <li class="item__link hover:text-Dark-Grey-Blue"><a href="./index.html">Home</a></li>
+                        <li class="item__link hover:text-Dark-Grey-Blue "><a href="./about.html">About Us</a></li>
+                        <li class="item__link hover:text-Dark-Grey-Blue"><a href="./subscribe.html">Create Your Plan</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+    <main class="flex flex-col  mt-4 justify-center xl:max-w-[1280px]">
+        <div class="main__img  w-full flex justify-center z-0 pt-10 mb-36  md:pt-0">
+
+            <div
+                class="main__info flex flex-col z-10 w-[95%] p-10 text-Light-Cream text-center  rounded-xl py-24 
+      bg-[url(/assets/about/mobile/image-hero-whitecup.jpg)] bg-cover bg-center sm:bg-[url(/assets/about/desktop/image-hero-whitecup.jpg)] xl:max-w-[1280px]">
+                <div class="main__header-info md:flex md:flex-col md:w-[400px] md:text-start lg:w-[495px]">
+
+                    <h1 class="  text-3xl font-fraunces font-black py-8">About Us</h1>
+                    <p class="text-balance text-base/7">Coffeeroasters began its journey of exotic discovery in 1999,
+                        highlighting
+                        stories of coffee from around the world. We have since been dedicated to bring the perfect cup -
+                        from bean to brew - in every shipment.</p>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="w-[95%] flex flex-col justify-center self-center md:flex-row md:gap-8 xl:gap-32 xl:w-[1100px]">
+            <div class="layot__main  flex flex-col justify-center  text-center h-auto md:flex-1 ">
+                <img class="rounded-xl h-auto " src="./assets/about/mobile/image-commitment.jpg" alt="">
+
+            </div>
+            <section
+                class="layot__main   flex flex-col justify-center self-center mt-20 text-center md:flex-1 md:mt-0 md:text-start ">
+                <article>
+                    <h2 class="font-fraunces font-black text-Dark-Grey-Blue text-4xl z-10 mb-8">Our conmmiment</h2>
+                    <p class="text-Dark-Grey-Blue opacity-80 text-base/7 text-balance">We’re built on a simple mission
+                        and a
+                        commitment to doing good along the way. We want to make it easy for you to discover and brew the
+                        world’s best coffee at home. It all starts at the source. To locate the specific lots we want to
+                        purchase, we travel nearly 60 days a year trying to understand the challenges and opportunities
+                        in
+                        each of these places. We collaborate with exceptional coffee growers and empower a global
+                        community
+                        of farmers through with well above fair-trade benchmarks. We also offer training, support farm
+                        community initiatives, and invest in coffee plant science. Curating only the finest blends, we
+                        roast
+                        each lot to highlight tasting profiles distinctive to their native growing region.
+                    </p>
+
+                </article>
+
+
+            </section>
+        </div>
+        <section class="w-full flex flex-col relative items-center">
+            <div class="w-[95%] flex flex-col justify-center align-middle items-center lg:justify-end  ">
+                <div class="w-[85%] flex justify-center items-center align-middle z-10 mt-32 lg:justify-end lg:h-[475px]">
+                    <picture>
+                        <source srcset="./assets/about/mobile/image-quality.jpg" media="(max-width: 769px)">
+                        <source srcset="./assets/about/desktop/image-quality.jpg" media="(min-width: 1280px)">
+                        <source srcset="./assets/about/tablet/image-quality.jpg" media="(min-width: 769px)">
+                        <img class="rounded-xl w-full h-auto" src="./assets/about/mobile/image-quality.jpg" alt="High-quality coffee">
+                    </picture>
+                    
+                    
+                </div>
+                <div
+                    class="w-full -mt-28 flex flex-col bg-Dark-Grey-Blue text-center py-16 px-8 rounded-lg text-Light-Cream items-center lg:max-w-[1280px] lg:items-start lg:text-start lg:pt-16 pb-32 xl:-mt-80 xl:max-w-[1280px]">
+                    <h3 class="font-fraunces font-black text-3xl mb-6 pt-32 xl:w-[540px] lg:pt-0">Uncompromising quality</h3>
+                    <p class=" text-base/7 opacity-80 xl:w-[540px]">Although we work with growers who pay close attention to all
+                        stages of harvest and processing, we employ, on our end, a rigorous quality control program to
+                        avoid over-roasting or baking the coffee dry. Every bag of coffee is tagged with a roast date
+                        and batch number. Our goal is to roast
+                        consistent, user-friendly coffee, so that brewing is easy and enjoyable.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section
+            class="justify-center self-center  flex text-center w-[330px] md:w-full text-Dark-Grey-Blue mt-32 mb-32 xl:max-w-[1100px]">
+            <div class="box__works flex flex-col md:w-[95%] md:text-start md:ml-4">
+                <div class="mb-20">
+                    <h4 class="text-Just-Grey text-2xl font-fraunces font-bold">Our headquarters</h4>
+                </div>
+                <div class="md:flex md:justify-start md:gap-8 md:w-full lg:max-w-[1045px]">
+                    <article class=" mb-20">
+                        <div class="">
+                            <div class="flex items-center justify-center md:justify-start">
+                                <img src="./assets/about/desktop/illustration-uk.svg" alt="">
+                            </div>
+                            <h2 class="text-3xl font-fraunces font-black my-8">United Kingdom</h2>
+                            <div class="flex flex-col gap-2">
+                                <p>68 Asfordby Rd</p>
+                                <p>Alcaston</p>
+                                <p>SY6 1YA</p>
+                                <p>+44 1241 918425</p>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class=" mb-20">
+                        <div class="">
+                            <div class="flex items-center justify-center">
+                                <img src="./assets/about/desktop/illustration-canada.svg" alt="">
+                            </div>
+                            <h2 class="text-3xl font-fraunces font-black my-8">Canada</h2>
+                            <div class="flex flex-col gap-2">
+                                <p>1528 Eglinton Avenue</p>
+                                <p>Toronto</p>
+                                <p>Ontario M4P 1A6</p>
+                                <p>+1 416 485 2997</p>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="">
+                        <div class="">
+                            <div class="flex items-center justify-center">
+                                <img src="./assets/about/desktop/illustration-australia.svg" alt="">
+                            </div>
+                            <h2 class="text-3xl font-fraunces font-black my-8">Australia</h2>
+                            <div class="flex flex-col gap-2">
+                                <p>36 Swanston Street</p>
+                                <p>Kewell</p>
+                                <p>Victoria</p>
+                                <p>+61 4 9928 3629</p>
+                            </div>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="layout__footer flex flex-col w-full items-center ">
+        <div
+            class="box__footer flex flex-col w-[95%] py-20  lg:flex-row  lg:items-center lg:px-8 lg:py-0 lg:h-[120px] bg-Very-Dark-Cyan">
+            <div class="text-Light-Cream flex justify-center lg:w-[236px]">
+                <img src="./assets/shared/desktop/logo-light.svg" alt="">
+            </div>
+            <div class="link__footer flex justify-center my-12 lg:ml-8 lg:w-[30%] lg:my-0">
+                <ul
+                    class="link__footer--box text-Just-Grey flex flex-col justify-center uppercase items-center gap-6 text-xs font-bold lg:flex-row">
+                    <li class="item__link hover:text-Pale-Orange"><a href="./index.html">Home</a></li>
+                    <li class="item__link hover:text-Pale-Orange"><a href="./about.html">About us</a></li>
+                    <li class="item__link hover:text-Pale-Orange"><a href="./subscribe.html">Create your plan</a></li>
+                </ul>
+            </div>
+            <div class="box__shared flex flex-row justify-center gap-8 h-6  lg:w-[50%] lg:justify-end ">
+                <img class="cursor-pointer" src="./assets/shared/desktop/icon-facebook.svg" alt="">
+                <img class="cursor-pointer" src="./assets/shared/desktop/icon-twitter.svg" alt="">
+                <img class="cursor-pointer" src="./assets/shared/desktop/icon-instagram.svg" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/style.css" rel="stylesheet">
+
+  <title>Mi Proyecto</title>
+</head>
+
+<body class="h-full bg-Light-Cream w-full max-w-[1440px] mx-auto mb-24">
+  <header class="w-full flex justify-center  xl:max-w-[1280px] ">
+    <div
+        class="box__header relative flex flex-col justify-center    my-8 ml-4 md:flex-row md:justify-between  w-[95%] ">
+
+        <div class="box__shared-header w-12 right-0 h-8 absolute z-50 top-0">
+            <img class="open__close absolute top-0 z-50 right-7 md:hidden" src="./assets/shared/mobile/icon-hamburger.svg"
+                alt="">
+            <img class="open__close absolute hidden top-0 z-50 right-7 md:hidden" src="./assets/shared/mobile/icon-close.svg"
+                alt="">
+        </div>
+        <div class="flex w-[163px] h-auto z-30 md:w-[236px]">
+            <img class="object-contain w-full" src="./assets/shared/desktop/logo.svg" alt="">
+        </div>
+
+        <div class="flex  relative w-full md:w-[50%] xl:justify-center">
+
+            <div
+                class="nav__gradient hidden z-20 top-0 left-0 fixed bg-[linear-gradient(0deg,_rgba(255,255,255,0.5)_0%,_rgba(255,255,255,1)_40%)] h-screen w-full md:hidden">
+            </div>
+            <nav
+                class="header__nav hidden  flex absolute top-28 justify-center w-full z-30 md:relative md:flex md:top-0 md:justify-end">
+                <ul class="link__footer--box text-Dark-Grey-Blue font-fraunces  flex flex-col justify-center  items-center gap-6 text-2xl font-black 
+            md:flex-row md:text-xs md:text-Just-Grey md:uppercase md:font-barlow md:font-bold ">
+                    <li class="item__link hover:text-Dark-Grey-Blue"><a href="./index.html">Home</a></li>
+                    <li class="item__link hover:text-Dark-Grey-Blue "><a href="./about.html">About Us</a></li>
+                    <li class="item__link hover:text-Dark-Grey-Blue"><a href="./subscribe.html">Create Your Plan</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+
+
+</header>
+  <main class="flex flex-col relative mt-4 justify-center">
+    <div class="main__img relative w-full flex justify-center z-0 pt-10 pb-10 md:pt-0">
+      <div
+        class="main__info flex flex-col z-10 w-[95%] p-10 text-Light-Cream text-center mb-20 rounded-xl py-24 
+      bg-[url(/assets/home/mobile/image-hero-coffeepress.jpg)] bg-cover bg-center md:bg-[url(/assets/home/desktop/image-hero-coffeepress.jpg)]">
+      <div class="main__header-info md:flex md:flex-col md:w-[400px] md:text-start lg:w-[495px]">
+        <h1 class="  text-balance text-5xl font-fraunces font-black py-10 lg:text-7xl">Great coffee made simple.</h1>
+        <p class="text-balance">Start your mornings with the world’s best coffees. Try our expertly curated artisan
+          coffees from our best roasters delivered directly to your door, at your schedule.</p>
+        <div class="btn__header pt-10">
+          <button class="py-4 px-8 transition-all ease duration-200 hover:bg-Light-Button bg-Dark-Cyan font-fraunces font-bold text-lg rounded-lg">Create your plan</button>
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+    <div class="layot__main relative w-[95%] flex flex-col justify-center self-center h-36 text-center">
+      <div class="">
+        <h2 class="font-fraunces font-bold text-transparent text-5xl z-10 bg-[linear-gradient(0deg,_#333d4b05_0%,_#333d4bc7_100%)] bg-clip-text md:bg-[linear-gradient(0deg,_#333d4b05_0%,_#333d4b54_100%)] md:text-8xl lg:text-9xl">
+
+          our collection</h2>
+
+      </div>
+     
+
+    </div>
+    <section class="w-full flex flex-col justify-center   items-center mb-24 lg:-mt-14 z-10">
+      <div class="lg:flex lg:w-[95%] gap-8 lg:max-w-[1111px]">
+      <article class="w-[290px] lg:w-auto flex mb-8">
+        <div class="flex w-full flex-col justify-center items-center">
+          <div class="flex w-44 justify-center">
+            <img class="object-cover" src="./assets/home/desktop/image-gran-espresso.png" alt="">
+          </div>
+          <div class="text-center text-Dark-Grey-Blue  my-8">
+            <h3 class="font-fraunces font-bold text-2xl mb-4">Gran Espresso</h3>
+            <p class="text-base/7">Light and flavorful blend with cocoa and black pepper for an intense experience</p>
+          </div>
+        </div>
+      </article>
+      <article class="w-[290px] flex mb-8 lg:w-auto">
+        <div class="flex w-full flex-col justify-center items-center">
+          <div class="flex w-44 justify-center">
+            <img class="object-cover" src="./assets/home/desktop/image-planalto.png" alt="">
+          </div>
+          <div class="text-center text-Dark-Grey-Blue my-8">
+            <h3 class="font-fraunces font-bold text-2xl mb-4">Planalto</h3>
+            <p class="text-base/7">Brazilian dark roast with rich and velvety body, and hints of fruits and nuts</p>
+          </div>
+        </div>
+      </article>
+      <article class="w-[290px] flex mb-8 lg:w-auto">
+        <div class="flex w-full flex-col justify-center items-center">
+          <div class="flex w-44 justify-center">
+            <img class="object-cover" src="./assets/home/desktop/image-piccollo.png" alt="">
+          </div>
+          <div class="text-center text-Dark-Grey-Blue  my-8">
+            <h3 class="font-fraunces font-bold text-2xl mb-4">Piccollo</h3>
+            <p class="text-base/7">Mild and smooth blend featuring notes of toasted almond and dried cherry </p>
+          </div>
+        </div>
+      </article>
+      <article class="w-[290px] flex mb-8 lg:w-auto">
+        <div class="flex w-full flex-col justify-center items-center">
+          <div class="flex w-44 justify-center">
+            <img class="object-cover" src="./assets/home/desktop/image-danche.png" alt="">
+          </div>
+          <div class="text-center text-Dark-Grey-Blue my-8">
+            <h3 class="font-fraunces font-bold text-2xl mb-4  ">Danche</h3>
+            <p class="text-base/7">Ethiopian hand-harvested blend densely packed with vibrant fruit notes</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    </section>
+    <section class="w-full flex flex-col relative items-center">
+      <div class="w-[95%] flex flex-col justify-center align-middle ">
+        <div class="w-full  bg-Dark-Grey-Blue lg:bg-Very-Dark-Cyan text-center py-14 px-8 rounded-t-lg text-Light-Cream lg:flex lg:flex-col lg:items-center">
+          <h3 class="font-fraunces font-bold text-3xl mb-6 text-pretty">Why choose us?</h3>
+          <p class="lg:w-[540px] text-base/7">A large part of our role is choosing which particular coffees will be featured in our
+            range. This means working closely with the best coffee growers to give you a more impactful experience on
+            every level.</p>
+        </div>
+        <div class="box__bg relative ">
+          <div class="absolute top-0 h-[900px] md:h-[800px] lg:h-[400px] w-full bg-Very-Dark-Cyan rounded-b-lg "></div>
+        </div>
+        <div class="z-40 lg:flex  gap-8 mx-12">
+        <article class=" w-full flex flex-col align-middle p-8  text-center z-10 lg:px-0">
+          <div class="bg-Dark-Cyan text-Light-Cream py-20 px-20 flex flex-col h-full rounded-lg lg:px-12">
+            <div class="justify-center items-center align-middle flex mb-14">
+              <img class="" src="./assets/home/desktop/icon-coffee-bean.svg" alt="">
+            </div>
+            <h3 class="text-2xl font-fraunces font-bold mb-8">Best quality</h3>
+            <p class="text-base/7 text-pretty">
+              Discover an endless variety of the world’s best artisan coffee from each of our roasters.
+            </p>
+          </div>
+        </article>
+        <article class=" w-full flex flex-col align-middle p-8  text-center z-10 lg:px-0">
+          <div class="bg-Dark-Cyan text-Light-Cream py-20 px-20 flex flex-col h-full  rounded-lg  lg:px-12">
+            <div class="justify-center items-center align-middle flex mb-14">
+              <img class="" src="./assets/home/desktop/icon-gift.svg" alt="">
+            </div>
+            <h3 class="text-2xl font-fraunces font-bold mb-8">Exclusive benefits</h3>
+            <p class="text-base/7 text-pretty">
+              Special offers and swag when you subscribe, including 30% off your first shipment.</p>
+          </div>
+        </article>
+        <article class=" w-full flex flex-col align-middle p-8 text-center z-10 lg:px-0">
+          <div class="bg-Dark-Cyan text-Light-Cream py-20 px-20 flex flex-col h-full  rounded-lg  lg:px-12">
+            <div class="justify-center items-center align-middle flex mb-14 h-[73px]">
+              <img class="" src="./assets/home/desktop/icon-truck.svg" alt="">
+            </div>
+            <h3 class="text-2xl font-fraunces font-bold mb-8">Free shipping</h3>
+            <p class="text-base/7 text-pretty">We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.</p>
+          </div>
+        </article>
+      </div>
+      </div>
+    </section>
+    <section class="justify-center self-center  flex text-center w-[330px] text-Dark-Grey-Blue mb-52 md:w-[95%] lg:max-w-[1045px] mt-12">
+      <div class="box__works flex flex-col md:px-4">
+        <div class="mb-24 md:mb-10">
+          <h4 class="text-Just-Grey text-2xl font-fraunces font-bold md:text-start">How it works</h4>
+        </div>
+        <div class="hidden md:flex justify-start gap-[31%] relative md:mb-10">
+          <div class="w-8 h-8 border-2 border-Dark-Cyan rounded-full bg-Light-Cream z-10"></div>
+          <div class="w-8 h-8 border-2 border-Dark-Cyan rounded-full bg-Light-Cream z-10"></div>
+          <div class="w-8 h-8 border-2 border-Dark-Cyan rounded-full bg-Light-Cream z-10"></div>
+          <div class="hidden md:block absolute w-[70%] h-1 bg-Pale-Orange top-[50%] translate-y-[-50%] left-4">
+          </div>
+        </div>
+        <div class="md:flex md:flex-row md:gap-4 md:text-start">
+        <article class=" mb-16">
+          <div class="">
+            <span class="text-7xl font-fraunces font-black text-Pale-Orange">01</span>
+            <h2 class="text-3xl font-fraunces font-bold my-8 md:max-w-[200px]">Pick your coffee</h2>
+            <p>Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices
+              for them. There are new coffees in all profiles every month for you to try out.</p>
+          </div>
+        </article>
+        <article class=" mb-16">
+          <div class="">
+            <span class="text-7xl font-fraunces font-black text-Pale-Orange">02</span>
+            <h2 class="text-3xl font-fraunces font-bold my-8">Choose the frequency</h2>
+            <p>Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel
+              your subscription with no commitment through our online portal.</p>
+          </div>
+        </article>
+        <article class=" mb-16">
+          <div class="">
+            <span class="text-7xl font-fraunces font-black text-Pale-Orange">03</span>
+            <h2 class="text-3xl font-fraunces font-bold my-8 lg:w-52">Receive and enjoy!</h2>
+            <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class
+              coffees curated to provide a distinct tasting experience.</p>
+          </div>
+        </article>
+      </div>
+        <div class="btn__plan pt-10 md:flex md:self-start">
+          <button class="text-Light-Cream py-4 transition-all ease duration-200 hover:bg-Light-Button px-8 bg-Dark-Cyan font-fraunces font-bold text-lg rounded-lg">Create your
+            plan</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="layout__footer flex flex-col w-full items-center ">
+    <div
+        class="box__footer flex flex-col w-[95%] py-20  lg:flex-row  lg:items-center lg:px-8 lg:py-0 lg:h-[120px] bg-Very-Dark-Cyan">
+        <div class="text-Light-Cream flex justify-center lg:w-[236px]">
+            <img src="./assets/shared/desktop/logo-light.svg" alt="">
+        </div>
+        <div class="link__footer flex justify-center my-12 lg:ml-8 lg:w-[30%] lg:my-0">
+            <ul
+                class="link__footer--box text-Just-Grey flex flex-col justify-center uppercase items-center gap-6 text-xs font-bold lg:flex-row">
+                <li class="item__link hover:text-Pale-Orange"><a href="./index.html">Home</a></li>
+                <li class="item__link hover:text-Pale-Orange"><a href="./about.html">About us</a></li>
+                <li class="item__link hover:text-Pale-Orange"><a href="./subscribe.html">Create your plan</a></li>
+            </ul>
+        </div>
+        <div class="box__shared flex flex-row justify-center gap-8 h-6  lg:w-[50%] lg:justify-end ">
+            <img class="cursor-pointer" src="./assets/shared/desktop/icon-facebook.svg" alt="">
+            <img class="cursor-pointer" src="./assets/shared/desktop/icon-twitter.svg" alt="">
+            <img class="cursor-pointer" src="./assets/shared/desktop/icon-instagram.svg" alt="">
+        </div>
+    </div>
+</footer>
+
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
